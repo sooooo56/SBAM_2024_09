@@ -4,16 +4,18 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
-
 @Controller
 public class UsrHomeController {
 	
-	int a = 0;
-	
-	@GetMapping("/usr/home/count")
+	@GetMapping("/usr/home/main")
 	@ResponseBody
-	public int showMain3() {
-		return a++;
+	public String showMain() {
+		return "안녕하세요";
 	}
 	
+	@GetMapping("/usr/home/main2")
+	@ResponseBody
+	public int showMain2() {
+		return 10;
+	}
 }
